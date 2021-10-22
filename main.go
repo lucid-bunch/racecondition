@@ -44,7 +44,7 @@ func fetchVersion1(level, req int) {
 	wg.Add(1)
 	go func() {
 		defer wg.Done()
-		f := fmt.Sprintf("%d  %s", level, "SA")
+		f := fmt.Sprintf("%d %s", level, "SA")
 		err = fetchDownstream(f)
 		if err != nil {
 			errors <- err
@@ -74,7 +74,7 @@ func fetchVersion1(level, req int) {
 	wg.Add(1)
 	go func() {
 		defer wg.Done()
-		f := fmt.Sprintf("%d  %s", level, "SD")
+		f := fmt.Sprintf("%d %s", level, "SD")
 		err = fetchDownstream(f)
 		if err != nil {
 			errors <- err
@@ -111,7 +111,7 @@ func fetchVersion2(level, req int) {
 	wg.Add(1)
 	go func() {
 		defer wg.Done()
-		f := fmt.Sprintf("%d  %s", level, "SA")
+		f := fmt.Sprintf("%d %s", level, "SA")
 		err = fetchDownstream(f)
 		if err != nil {
 			errors <- err
@@ -141,7 +141,7 @@ func fetchVersion2(level, req int) {
 	wg.Add(1)
 	go func() {
 		defer wg.Done()
-		f := fmt.Sprintf("%d  %s", level, "SD")
+		f := fmt.Sprintf("%d %s", level, "SD")
 		err = fetchDownstream(f)
 		if err != nil {
 			errors <- err
